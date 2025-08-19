@@ -1,0 +1,446 @@
+﻿
+:root {
+    --background-main: #FEE8D9; /* لون خلفية رئيسية - برتقالي فاتح (Peach) */
+
+    --background-secondary: #E1E9C9; /* لون خلفية ثانوية - أخضر فاتح جداً (Very Light Green) */
+
+    --primary-color: #EEEEEE; /* اللون الأساسي - رصاصي هافت (Muted Green) */
+
+    --accent-color: #EDA35A; /* لون اللمسات - برتقالي داكن (Dark Orange) */
+
+    --text-color-dark: #333333; /* لون نصوص رئيسية - رمادي داكن جداً (Very Dark Gray) */
+
+    --text-color-dark-alt: #2E2E2E; /* لون نصوص بديل - رمادي داكن (Dark Gray) */
+
+}
+    
+/*----------------------------- Top par    ----------------------------*/
+
+.topPar {
+    background-color: #fff !important;
+    background-color: rgba(230, 230, 225, 0.5);
+    border-bottom: .8px solid #E1E9C9  ;
+}
+
+.promo-wrapper {
+    flex: 1 1 auto;
+    gap: .5rem;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.promo-prev, .promo-next {
+    color: #333;
+    border: none;
+    background: transparent;
+    font-size: .95rem;
+}
+
+.icon-group a {
+    color: #333;
+    margin-left: 2rem;
+    font-size: 0.877rem !important;
+}
+
+    .icon-group a:hover {
+        color: #bbbc77;
+    }
+
+.promo-text {
+    font-weight: 400;
+    max-width: 75vw;
+    text-align: center;
+    color: #333;
+    font-family: Lato;
+    font-size:.888rem;
+}
+/*************** Responsive behavior: hide promo on very small screens ****************/
+
+@media (max-width: 576px) {
+    .promo-wrapper {
+        font-size: .9rem !important;
+    }
+
+    .icon-group a {
+        margin-left: .45rem;
+        font-size: 1rem;
+    }
+    .icon-group{
+
+    }
+}
+
+/* Extra Small (هواتف صغيرة جداً) — اختيارية لتهذيب أدق */
+@media (max-width: 400px) {
+    .topPar .bar {
+        padding-inline: 10px;
+    }
+
+    .icon-group {
+        gap: .6rem;
+    }
+
+        .icon-group a {
+            font-size: .9rem;
+        }
+
+    .promo-text {
+        font-size: .85rem;
+        max-width: 70vw;
+    }
+}
+
+
+
+
+/********************** Navbar  ***************************/
+
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    padding: 8px 12px;
+   /* background-color: rgba(255, 255, 255, 0.15) !important; 
+    backdrop-filter: blur(12px); */
+}
+
+
+
+
+
+
+
+.font-Text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+}
+
+    .font-Text:hover {
+        color: #bbbc77;
+    }
+/* القوائم */
+.font-Textli li a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    transition: font-weight 0.3s ease;
+}
+
+    .font-Textli li a:hover {
+        font-weight: 590;
+    }
+
+.login-btn {
+    background-color: #e6e6e1;
+    font-size: .7rem !important;
+    color: #2C3930;
+    padding: 6px 16px !important;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background, 0.3s padding, 0.3s font-size;
+    font-weight: 600;
+}
+
+    .login-btn:hover {
+        background-color: #bbbc77;
+    }
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.2rem;
+}
+
+    .navbar-toggler:focus, .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+.nav-link {
+    position: relative;
+}
+
+    .nav-link:hover {
+        color: #bbbc77;
+    }
+
+.navbar-nav .nav-item a:active {
+    color: #bbbc77;
+}
+
+.navbar .navbar-brand:active {
+    color: none !important;
+}
+/*+++++++++++++    dropdown  +++++++++++++++++++*/
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.15) !important; /* لون شبه شفاف */
+    backdrop-filter: blur(12px); /* تأثير الزجاج */
+    -webkit-backdrop-filter: blur(12px); /* دعم للـ Safari */
+    border: none;
+    box-shadow: none;
+    
+}
+
+/* تغيير لون النص لعناصر dropdown */
+
+.dropdown-item {
+    position: relative; /* ضروري للـ ::after */
+    color: #E1E9C9 !important;
+    font-size: .85rem !important;
+    background: none !important;
+    transition: color 0.3s ease;
+    border-bottom:0;
+}
+
+    /* الخط السفلي المتحرك من الوسط */
+    .dropdown-item::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%; /* البداية من المنتصف */
+        transform: translateX(-50%) scaleX(0); /* غير ظاهر في البداية */
+        transform-origin: center; /* يتمدد من الوسط */
+        width: 90%; /* طول الخط النهائي */
+        height: 1px; /* سمك الخط */
+        background-color: #E1E9C9; /* لون الخط */
+        transition: transform 0.3s ease; /* حركة سلسة */
+    }
+
+    /* عند hover، focus، أو active */
+    .dropdown-item:hover::after,
+    .dropdown-item:focus::after,
+    .dropdown-item:active::after {
+        transform: translateX(-50%) scaleX(1); /* الخط يتمدد من الوسط */
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item:active {
+        color: #ffffff !important; /* لون النص عند التفاعل */
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .offcanvas-header{
+    border-bottom:1px solid #ccc; 
+    margin-top:35px !important;
+    }
+
+    
+
+
+
+/**************** Responsive For NAV  *********************/
+@media(min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background-color: #bbbc77 /*#2C3930*/;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .offcanvas {
+        background-color: rgba(255, 255, 255, 0.15) !important; /* لون شبه شفاف */
+        backdrop-filter: blur(12px); /* تأثير الزجاج */
+        -webkit-backdrop-filter: blur(12px); /* دعم للـ Safari */
+        border: none; /* نشيل حدود offcanvas */
+        box-shadow: none; /* نشيل الظل */
+    }
+
+    .offcanvas-title {
+        color: #EEEEEE; /* لون فاتح للشاشات الصغيرة */
+    }
+
+    .offcanvas .font-Textli li a {
+        color: #EEEEEE; /* يعطي شعور دافئ ولطيف */
+        text-shadow: none; /* تلغي الظل باش يبان واضح */
+        font-size: .9rem;
+        margin: 15px;
+    }
+
+        .offcanvas .font-Textli li a:hover {
+            font-size: 1rem;
+            color: #bbbc77;
+            border-bottom: 1px solid #bbbc77;
+            margin-bottom: 3px;
+        }
+
+    .login-btn {
+        
+        font-size: 10px;
+        padding: 6px 15px;
+        font-weight: 500;
+    }
+}
+@media (max-width: 571px) {
+    #offcanvasNavbar .navbar-nav {
+        border-bottom: 1px solid #ccc; /* الخط */
+       
+    }
+
+}
+
+/* ===========================
+   Breakpoints — Responsive
+   =========================== */
+
+/* Small devices 576px–767.98px  572px*/
+@media (min-width: 376px) and (max-width: 767.98px) {
+    .navbar {
+        padding: 25px 16px !important;
+    }
+
+    .font-Text {
+        font-size: 1.6rem;
+    }
+
+    .font-Textli li a {
+        font-size: 1rem;
+    }
+
+    .login-btn {
+        font-size: .67rem !important;
+        padding: 7px 15px;
+    }
+}
+
+/* Medium devices 768px–991.98px */
+@media (min-width: 768px) and (max-width: 1991.98px) {
+    .navbar {
+        padding: 30px 20px;
+    }
+
+    .font-Text {
+        font-size: 1.8rem;
+    }
+
+    .font-Textli li a {
+        font-size: 1.05rem;
+    }
+
+    .login-btn {
+        font-size: .6rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Large devices 992px–1199.98px 1174 */
+@media (min-width: 1992px) and (max-width: 2199.98px) {
+    .navbar {
+        padding: 35px 24px;
+    }
+
+    .font-Text {
+        font-size: 2rem;
+    }
+
+    .font-Textli li a {
+        font-size: 2rem !important;
+    }
+
+    .login-btn {
+        font-size: 2rem !important;
+        padding: 8px 22px;
+    }
+}
+
+/* Extra Large 1200px–1399.98px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .navbar {
+        padding: 16px 28px;
+    }
+
+    .font-Text {
+        font-size: 2.1rem;
+    }
+
+    .font-Textli li a {
+        font-size: 1.15rem;
+    }
+
+    .login-btn {
+        font-size: 1.1rem;
+        padding: 9px 24px;
+    }
+}
+
+/* Extra Extra Large ≥1400px */
+@media (min-width: 1400px) {
+    .navbar {
+        padding: 18px 32px;
+    }
+
+    .font-Text {
+        font-size: 2.2rem;
+    }
+
+    .font-Textli li a {
+        font-size: 1.2rem;
+    }
+
+    .login-btn {
+        font-size: 1.15rem;
+        padding: 10px 26px;
+    }
+}
+
+
+
+
+    /*----------------------  hero section   ------------------------------*/
+
+
+
+    .text-shadow {
+        color: #bbbc77;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .btn-style {
+        border: 2px solid #bbbc77;
+        color: #cfcba7;
+        font-size: 1rem;
+        padding: 4px 25px;
+    }
+
+        .btn-style:hover {
+            background-color: #bbbc77 !important;
+            color: #fff !important;
+            border: 2px solid #bbbc77;
+        }
+
+/**************    ****************/
+@media (max-width: 571px) {
+    .hero-slider h1{
+        font-size:1rem;
+        margin-top:30px;
+    }
+    .hero-slider p{
+        font-size:.8rem;
+        width:100%;
+        width:90vw;
+    }
+    .btn{
+        font-size:.8rem;
+    }
+}

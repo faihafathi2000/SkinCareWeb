@@ -1,0 +1,122 @@
+﻿
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    background-image: url('../img_noriva/hero2002.jpg');
+    background-size: cover; /* الصورة تغطي كامل الشاشة */
+    background-position: center; /* متمركزة */
+    min-height: 100vh; /* نفس ارتفاع الشاشة */
+}
+
+    .hero-section .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6); /* أسود شفاف */
+        z-index: 1;
+    }
+
+    .hero-section .container-md {
+        position: relative;
+        z-index: 2; /* الفورم يطلع فوق الـ overlay */
+    }
+hero-section form{
+
+}
+/*---------------cards-------------------*/
+.card-header h3 {
+    font-family: 'Montserrat' sans-serif;
+    margin-top: 100px;
+}
+
+.card-header {
+    background-color: #bbbc77;
+    opacity:0.5;
+    
+}
+
+.card {
+    margin-bottom: 10px !important;
+    background-color: rgba(255, 255, 255, 0.15) !important; /* لون شبه شفاف */
+    backdrop-filter: blur(12px); /* تأثير الزجاج */
+}
+
+.card-body label{
+    color:#fff;
+
+}
+
+.div-creat h3 {
+    color: #fff !important;
+    font-family: 'Lato';
+    margin-top:25px;
+}
+/*---------------- input  -----------------*/
+/* استايل مخصص للفورم */
+.form-control {
+    background-color: transparent; /* يخلي الخلفية شفافة */
+    border: none; /* يشيل كل الحدود */
+    border-bottom: 2px solid #ccc; /* يخلي خط فقط تحت */
+    border-radius: 0; /* يشيل الزوايا الدائرية */
+    box-shadow: none; /* يشيل أي ظل افتراضي */
+    color: #fff; /* لون النص */
+}
+
+    /* تأثير عند التركيز */
+    .form-control:focus {
+        border-bottom: 2px solid #bbbc77; /* الخط يتحول للون اللي تبيه */
+        outline: none;
+        background-color:none;
+        box-shadow:none;
+        
+    }
+
+/*--------------- div-my-btn ---------------*/
+
+.row .div-my-btn .div-my-btn1 {
+    background-color: #bbbc77;
+    color: #fff;
+    font-family: 'Lato';
+    font-size: 1.1rem;
+}
+
+.row .div-my-btn .div-my-btn1:hover {
+    background-color: #eeeebe;
+    color: #0b0b01;
+}
+
+/*----------------Or continue with  ---------------*/
+.icons-sochial a {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    color:#fff;
+}
+
+.div-creat {
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    left: 15px; /* يحدد المسافة من حافة الفورم */
+    top: 75%;
+    transform: translateY(-50%); /* لمركزية السهم عمودياً */
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+    .back-arrow:hover {
+        color: #bbbc77;
+    }

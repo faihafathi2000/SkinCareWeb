@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Natural</title>
+    <link rel="icon" href="../img_noriva/favicon.ico" type="image/x-icon" />
+
+
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Css -->
+    <link href="../Css/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body >
+    <!-----------------------------header---------------------------->
+    <header >
+        <!----------------------------top par------------------------------->
+        <div class="topPar fixed-top">
+            <div class="container">
+                <div class="d-flex align-items-center">
+
+                    <div class="promo-wrapper d-flex justify-content-center align-items-center g-3 ">
+                        <button class="promo-prev" aria-label="Previous promotion"><i class="fa fa-chevron-left"></i></button>
+                        <div id="promoText" class="promo-text" aria-live="polite"></div>
+                        <button class="promo-next" aria-label="Next promotion"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+
+
+                 
+
+                    <div class="ms-auto icon-group d-flex justify-content-center align-items-center">
+                        <!-- Search يظهر في كل الشاشات -->
+                        <a href="#" class="d-flex text-decoration-none">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+
+                        <!-- User يظهر فقط في الشاشات الكبيرة -->
+                        <a href="#" class="d-none d-lg-flex ms-3 text-decoration-none">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+
+                        <!-- Cart يظهر فقط في الشاشات الكبيرة -->
+                        <a href="#" class=" ms-3 text-decoration-none">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </a>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <!------------------------------Navbar------------------------------>
+        <nav class="navbar navbar-expand-lg   ">
+
+            <div class="container ">
+                <!------------------ logo  ------------------> 
+                <a class="navbar-brand font-Text me-auto" href="#">
+                    <!--<img src="../img_noriva/Logo.png" alt="" width="50" height="50" class="d-inline-block " />-->
+                    Natural
+                </a>
+
+                <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Natural</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                         <!------------------------- القوائم في ناف بار -----------------------> 
+
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 font-Textli  ">
+                             <!-------------------- Home  ------------------> 
+                            <li class="nav-item font-Textli">
+                                <a class="nav-link " aria-current="page" href="#">Home</a>
+                            </li>
+                             <!-------------------- Shop/product dropdown  ------------------> 
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link me-colors " href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Shop/product
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+
+                             <!-------------------- Skin Type  ------------------------> 
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link  " href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Skin Type
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+
+                             <!------------------------- New Arrivals  -----------------> 
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">New Arrivals</a>
+                            </li>
+
+                             <!---------------------------- BestSellers   --------------> 
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">BestSellers</a>
+                            </li>
+                        </ul>
+
+                        
+
+                       
+                    </div>
+                 
+                </div>
+                <div>
+                    <a href="form.html" class=" btn btn-outline login-btn">Sign Up</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!--------------------------Hero section------------------------->
+
+    <section class="hero-slider">
+
+        <div class="position-relative">
+            <!-- صورة الخلفية -->
+            <img src="../img_noriva/cream-cotton-pad-with-copy-space.jpg" class="w-100" alt="Background"/>
+
+            <!-- الـ overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+            <!-- النص -->
+            <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+                <h1 class="fw-bold text-shadow">Welcome to Natural</h1>
+                <p class=" fw-semibold text-shadow">Discover skincare powered by nature. </p>
+                <p class="fw-semibold text-shadow">Our botanical formulas hydrate, protect, and reveal your skin’s natural glow. </p>
+                <a href="#" class=" btn btn-outline-light fw-semibold btn-style">Shop New</a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- bootstrab js -->
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+
+    <!-- JS -->
+    <script src="../Js/JavaScript.js"></script>
+</body>
+</html>
